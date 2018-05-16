@@ -1,0 +1,128 @@
+body {
+	font-family: 'Arvo', serif;
+	padding: 20px;
+}
+
+.stickyNav {
+	width: 33%;
+	position: fixed;
+	height: 100%;
+	text-align: right;
+	ul {
+		list-style-type: none;
+		font-size: 20px;
+		margin-top: 30px;
+		li {
+			margin-bottom: 5px;
+			&.active {
+				color: #bc8eaf;
+			}
+		}
+		li:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.gridSection {
+	padding-left: 37%;
+	text-align: center;
+}
+
+.aboutMeSection {
+	padding-left: 40%;
+	text-align: center;
+}
+
+.aboutMeSection img {
+	display: block;
+	width: 50%;
+	margin: auto;
+}
+
+.portfolioContainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.projectDescription {
+	// display: none;
+	margin-top: 50px;
+}
+
+.hide {
+	display: none;
+}
+
+.imageDescription {
+	width: 75%;
+	position: absolute;
+	display: none;
+	color: white;
+	font-size: 1.2vw;
+}
+
+.portfolioContainer .portfolioImageContainer {
+	width: 30%;
+	padding: 2em;
+	display: inline-flex;
+	background: #e5e5e5;
+	margin: 10px;
+	vertical-align: top;
+	align-items: center;
+	justify-content: center;
+	// flex-grow: 2;
+	position: relative;
+	&:hover {
+		background: rgba(0,0,0,.8);
+		.imageDescription {
+			display: block;
+		}
+		img {
+			opacity: .1;
+		}
+	}
+	&:last-child {
+		// flex-grow: 0;
+	}
+	img {
+		width: 100%;
+	}
+}
+
+
+@media(max-width: 768px) {
+	body {
+		padding: 0;
+		overflow-x: hidden;
+	}
+	h1 {
+		font-size: 5vw;
+	}
+	.stickyNav {
+		width: 100%;
+		text-align: center;
+		font-size: 2.5vw;
+		height: auto;
+		background: white;
+		z-index: 100;
+		padding: 20px 0;
+		ul {
+			display: flex;
+			justify-content: space-evenly;
+		}
+	}
+	.gridSection,
+	.aboutMeSection {
+		text-align: center;
+		padding: 25% 5%;
+	}
+	.projectDescription {
+		display: none;
+	}
+	.imageDescription {
+		font-size: 12px;
+	}
+}
+

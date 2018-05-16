@@ -1,0 +1,110 @@
+body {
+  font-family: 'Arvo', serif;
+  padding: 20px; }
+
+.stickyNav {
+  width: 33%;
+  position: fixed;
+  height: 100%;
+  text-align: right; }
+  .stickyNav ul {
+    list-style-type: none;
+    font-size: 20px;
+    margin-top: 30px; }
+    .stickyNav ul li {
+      margin-bottom: 5px; }
+      .stickyNav ul li.active {
+        color: #bc8eaf; }
+    .stickyNav ul li:hover {
+      cursor: pointer; }
+
+.gridSection {
+  padding-left: 37%;
+  text-align: center; }
+
+.aboutMeSection {
+  padding-left: 40%;
+  text-align: center; }
+
+.aboutMeSection img {
+  display: block;
+  width: 50%;
+  margin: auto; }
+
+.portfolioContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.projectDescription {
+  margin-top: 50px; }
+
+.hide {
+  display: none; }
+
+.imageDescription {
+  width: 75%;
+  position: absolute;
+  display: none;
+  color: white;
+  font-size: 1.2vw; }
+
+.portfolioContainer .portfolioImageContainer {
+  width: 30%;
+  padding: 2em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background: #e5e5e5;
+  margin: 10px;
+  vertical-align: top;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative; }
+  .portfolioContainer .portfolioImageContainer:hover {
+    background: rgba(0, 0, 0, 0.8); }
+    .portfolioContainer .portfolioImageContainer:hover .imageDescription {
+      display: block; }
+    .portfolioContainer .portfolioImageContainer:hover img {
+      opacity: .1; }
+  .portfolioContainer .portfolioImageContainer img {
+    width: 100%; }
+
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+    overflow-x: hidden; }
+  h1 {
+    font-size: 5vw; }
+  .stickyNav {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5vw;
+    height: auto;
+    background: white;
+    z-index: 100;
+    padding: 20px 0; }
+    .stickyNav ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+      justify-content: space-evenly; }
+  .gridSection,
+  .aboutMeSection {
+    text-align: center;
+    padding: 25% 5%; }
+  .projectDescription {
+    display: none; }
+  .imageDescription {
+    font-size: 12px; } }
